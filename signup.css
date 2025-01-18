@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family:poppins; ;
+}
+
+body{
+    overflow: hidden;
+    background-image: url(photo.png);
+}
+
+.wrapper{
+    background-color: white;
+    border-radius: 0 20px 20px 0;
+    height: 100vh;
+    width: max(40%, 600px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+   font-size: 2.5rem;
+   font-weight: 1000;
+   text-transform: uppercase;
+}
+
+
+form{
+    width: min(400px, 100%);
+    margin-top: 20px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}  
+
+
+
+form > div{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+form label{
+    flex-shrink: 0;
+    height: 50px;
+    width: 50px;
+    background-color: violet;
+    fill : white;
+    color: white;
+    border-radius: 10px 0px 0px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 1000;
+}
+
+font input{
+    box-sizing: border-box;
+    flex-grow: 1;
+    min-width: 0;
+    height: 50px;
+    padding: 1em;
+    font: inherit;
+    border-radius: 0 10px 10px 0;
+    background-color: white;
+    transition: 150ms ease;
+    border-left: none;
+}
+
+form input:hover{
+    border-color: aqua;
+}
+
+form input:focus{
+    outline: none;
+    border-color: pink;
+}
+
+input{
+    border-radius: 0 10px 10px 0;
+    border-color: white;
+}
+
+div :has(:focus) > label{
+    background-color: #755C48;
+}
+
+form button{
+    margin-top: 10px;
+    border: none;
+    border-radius: 1000px;
+    padding: .85em 4em;
+    background-color: plum;
+    color: var(--base-color);
+    font: inherit;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 150ms ease;
+}
+
+form button :focus{
+    outline: none;
+    color: aqua;
+}
+
+form button:hover{
+    background-color: pink;
+}
+
+a{
+    text-decoration: none;
+    color: rgb(44, 19, 71);
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+@media(max-width: 1100px){
+    .wrapper{
+    
+        width: min(600px, 100%);
+    }
+}
+
+#errror-message{
+    color: red;
+    background-color: red;
+    border-bottom: red;
+}
